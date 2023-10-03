@@ -21,6 +21,7 @@ public class BallInput : MonoBehaviour
         }
         if (Keyboard.current.aKey.isPressed)
         {
+
             ballRigidBody.AddForce(Vector3.left);
         }
         if (Keyboard.current.sKey.isPressed)
