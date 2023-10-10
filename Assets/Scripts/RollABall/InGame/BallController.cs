@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    void Update()
+    private Rigidbody ballRigidBody;
+
+    private void Start()
     {
-        Debug.Log(this.transform.rotation);
+        ballRigidBody = this.GetComponent<Rigidbody>();
+    }
+
+    public void BallMove(Vector3 direction)
+    {
+        ballRigidBody.AddForce(direction);
     }
 }
