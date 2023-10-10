@@ -17,9 +17,7 @@ public class InGameTimer : MonoBehaviour
         }
         else
         {
-            TimerText.text = $"{timerTime -= Time.deltaTime}";
-            // 下の書き方だと小数点第二桁なのでよりスマートですね
-            // TimerText.text = $"{(timerTime -= Time.deltaTime).ToString("F2")}"; 
+            TimerText.text = $"{StringUtility.SecondsToTwoDecimalPlaces(timerTime -= Time.deltaTime)}";
         }
     }
 }

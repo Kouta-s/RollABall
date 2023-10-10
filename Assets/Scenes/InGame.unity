@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbd171c18e6aea498a03de73d84034d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ball: {fileID: 1999639295}
+  ballController: {fileID: 1999639301}
 --- !u!114 &226455889
 MonoBehaviour:
   m_ObjectHideFlags: 0
