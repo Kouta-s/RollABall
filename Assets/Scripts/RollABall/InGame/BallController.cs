@@ -22,6 +22,9 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "Cube")
+        {
+            Debug.Log("Damage");
+        }
     }
 }
