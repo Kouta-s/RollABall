@@ -19,4 +19,9 @@ public class BallController : MonoBehaviour
     {
         ballRigidBody.AddForce(direction);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+    }
 }
