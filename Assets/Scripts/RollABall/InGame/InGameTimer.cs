@@ -6,27 +6,18 @@ using UnityEngine.UI;
 public class InGameTimer : MonoBehaviour
 {
     public Text TimerText;
-    private float timerTime = 30f;
-    // delegate‚Ì’è‹`
-    public delegate void OneSecondsAction();
-    public OneSecondsAction OnTimePassed;
-
-    private void Start()
+    private float timerTime = 20f;
+    public float GetTimerTime
     {
-        // 1•bŒã‚Édelegate‚ğŒÄ‚Ño‚·
-        Invoke("ExecuteAction", 1f);
+        get { return timerTime; }
     }
 
-    private void ExecuteAction()
-    {
-        OnTimePassed?.Invoke();
-    }
-    // Update is called once per frame
     void Update()
     {
-        if (timerTime < 0)
+        if (timerTime <= 0)
         {
             TimerText.text = "0";
+            timerTime = 0;
         }
         else
         {
